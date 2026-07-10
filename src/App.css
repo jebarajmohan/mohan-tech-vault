@@ -188,16 +188,41 @@ body {
 }
 .copy-btn:hover { background: rgba(255,255,255,0.2); }
 
-.toc {
+.rightcol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   padding: 24px 16px;
   border-left: 1px solid var(--border);
-  font-size: 0.85rem;
-  overflow-y: auto;
   position: sticky;
   top: 72px;
   align-self: start;
   max-height: calc(100vh - 88px);
+  overflow-y: auto;
 }
+
+.toc { font-size: 0.85rem; }
+
+.recentbox {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.recentbox h4 {
+  margin: 0 0 10px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+.recentbox ul { list-style: none; margin: 0; padding: 0; }
+.recentbox li {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.recentbox li:hover { background: var(--bg-alt); }
 .toc h4 {
   margin: 0 0 10px;
   font-size: 0.75rem;
@@ -212,5 +237,5 @@ body {
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
-  .sidebar, .toc { border: none; border-bottom: 1px solid var(--border); }
+  .sidebar, .rightcol { border: none; border-bottom: 1px solid var(--border); }
 }

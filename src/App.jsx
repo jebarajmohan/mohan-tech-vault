@@ -150,17 +150,6 @@ export default function App() {
             </div>
           )}
 
-          {recentArticles.length > 0 && (
-            <div className="sidebar-section">
-              <h4>🕘 Recently Viewed</h4>
-              <ul>
-                {recentArticles.map((a) => (
-                  <li key={a.slug} onClick={() => openArticle(a.slug)}>{a.title}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
           <div className="sidebar-section">
             <h4>Articles ({filtered.length})</h4>
             <ul>
@@ -202,18 +191,30 @@ export default function App() {
           )}
         </main>
 
-        {headings.length > 0 && (
-          <aside className="toc">
-            <h4>On this page</h4>
-            <ul>
-              {headings.map((h) => (
-                <li key={h.id} className={h.level === 3 ? 'toc-sub' : ''}>
-                  <a href={`#${h.id}`}>{h.text}</a>
-                </li>
-              ))}
-            </ul>
-          </aside>
-        )}
+        <aside className="rightcol">
+          {headings.length > 0 && (
+            <div className="toc">
+              <h4>On this page</h4>
+              <ul>
+                {headings.map((h) => (
+                  <li key={h.id} className={h.level === 3 ? 'toc-sub' : ''}>
+                    <a href={`#${h.id}`}>{h.text}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {recentArticles.length > 0 && (
+            <div className="recentbox">
+              <h4>🕘 Recently Viewed</h4>
+              <ul>
+                {recentArticles.map((a) => (
+                  <li key={a.slug} onClick={() => openArticle(a.slug)}>{a.title}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </aside>
       </div>
     </div>
   )
