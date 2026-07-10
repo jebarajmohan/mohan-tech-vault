@@ -85,6 +85,10 @@ body {
   border-right: 1px solid var(--border);
   padding: 16px;
   overflow-y: auto;
+  position: sticky;
+  top: 72px;
+  align-self: start;
+  max-height: calc(100vh - 88px);
 }
 
 .sidebar-section { margin-bottom: 24px; }
@@ -189,6 +193,10 @@ body {
   border-left: 1px solid var(--border);
   font-size: 0.85rem;
   overflow-y: auto;
+  position: sticky;
+  top: 72px;
+  align-self: start;
+  max-height: calc(100vh - 88px);
 }
 .toc h4 {
   margin: 0 0 10px;
