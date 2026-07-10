@@ -154,8 +154,8 @@ body {
 }
 
 .article-body { line-height: 1.7; }
-.article-body h2 { margin-top: 32px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
-.article-body h3 { margin-top: 24px; }
+.article-body h2 { margin-top: 32px; border-bottom: 1px solid var(--border); padding-bottom: 8px; scroll-margin-top: 80px; }
+.article-body h3 { margin-top: 24px; scroll-margin-top: 80px; }
 .article-body pre {
   background: var(--code-bg);
   color: var(--code-text);
