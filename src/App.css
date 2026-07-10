@@ -159,10 +159,14 @@ body {
 .article-body pre {
   background: var(--code-bg);
   color: var(--code-text);
-  padding: 16px;
+  padding: 44px 16px 16px;
   border-radius: 8px;
   overflow-x: auto;
   position: relative;
+}
+.article-body pre code {
+  display: inline-block;
+  min-width: 100%;
 }
 .article-body code {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
@@ -185,6 +189,7 @@ body {
   padding: 4px 10px;
   font-size: 0.75rem;
   cursor: pointer;
+  z-index: 1;
 }
 .copy-btn:hover { background: rgba(255,255,255,0.2); }
 
