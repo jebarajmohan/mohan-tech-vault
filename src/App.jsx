@@ -216,6 +216,12 @@ export default function App() {
           )}
         </aside>
       </div>
+      <footer className="site-footer">
+        <span>© {new Date().getFullYear()} Mohan Tech Vault</span>
+        <button className="footer-link" onClick={() => openArticle('privacy-policy')}>
+          Privacy Policy
+        </button>
+      </footer>
     </div>
   )
 }
